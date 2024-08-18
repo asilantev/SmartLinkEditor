@@ -7,7 +7,6 @@ use App\Http\Controllers\RuleConditionController;
 use App\Http\Controllers\SmartLinkController;
 use Illuminate\Support\Facades\Route;
 
-var_dump(phpinfo());
 Route::get('/', function () {
     return view('welcome');
 });
