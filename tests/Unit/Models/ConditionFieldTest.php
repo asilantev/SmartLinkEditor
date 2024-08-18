@@ -3,9 +3,7 @@
 namespace Tests\Unit\Models;
 
 use App\Models\ConditionField;
-use App\Models\ConditionType;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Event;
 use Tests\TestCase;
 
