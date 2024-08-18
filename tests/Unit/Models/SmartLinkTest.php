@@ -5,11 +5,18 @@ namespace Tests\Unit\Models;
 use App\Models\RedirectRule;
 use App\Models\SmartLink;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Event;
 use Tests\TestCase;
 
 class SmartLinkTest extends TestCase
 {
     use RefreshDatabase;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+        Event::fake();
+    }
 
     public function test_create_smart_link()
     {

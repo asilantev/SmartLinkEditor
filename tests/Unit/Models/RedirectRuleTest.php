@@ -7,6 +7,7 @@ use App\Models\RedirectRule;
 use App\Models\RuleCondition;
 use App\Models\SmartLink;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Event;
 use Tests\TestCase;
 
 class RedirectRuleTest extends TestCase
@@ -16,6 +17,7 @@ class RedirectRuleTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
+        Event::fake();
 
         ConditionType::factory()->create(['code' => 'platform']);
         ConditionType::factory()->create(['code' => 'browser']);
