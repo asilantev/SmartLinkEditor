@@ -16,7 +16,7 @@ class RedirectRuleController extends Controller
 
     public function create()
     {
-        $smartLinks = SmartLink::all(); // Получаем все умные ссылки
+        $smartLinks = SmartLink::all();
         return view('redirect_rules.create', compact('smartLinks'));
     }
 

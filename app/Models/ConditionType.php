@@ -17,11 +17,6 @@ class ConditionType extends Model
         'deleted' => SendModelToBrokerEvent::class
     ];
 
-    public function conditions()
-    {
-        return $this->belongsToMany(RuleCondition::class, 'condition_type_id');
-    }
-
     public function fields()
     {
         return $this->belongsToMany(ConditionField::class, 'condition_type_field');

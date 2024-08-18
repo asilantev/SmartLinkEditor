@@ -4,13 +4,13 @@ namespace Tests\Unit\Models;
 
 use App\Models\RedirectRule;
 use App\Models\SmartLink;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\Event;
 use Tests\TestCase;
 
 class SmartLinkTest extends TestCase
 {
-    use RefreshDatabase;
+    use DatabaseTransactions;
 
     protected function setUp(): void
     {
