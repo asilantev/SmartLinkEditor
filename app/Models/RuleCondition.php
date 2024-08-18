@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Events\SendModelToBrokerEvent;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,6 +14,11 @@ class RuleCondition extends Model
 
     protected $casts = [
         'condition_value' => 'json',
+    ];
+
+    protected $dispatchesEvents = [
+        'saved' => SendModelToBrokerEvent::class,
+        'deleted' => SendModelToBrokerEvent::class
     ];
 
     public $timestamps = false;
